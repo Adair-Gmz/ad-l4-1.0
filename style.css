@@ -42,3 +42,15 @@ nav a {
     height:50%;
     object-fit: cover;
 }
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+  }
