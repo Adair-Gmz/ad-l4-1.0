@@ -1,6 +1,10 @@
 html {
     height: 100%;
     width: 100%;
+    background-color: #5dade2;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 nav {
@@ -24,4 +28,17 @@ nav a {
 .content {
     margin-top: 60px; /* Para evitar que el contenido quede oculto debajo del nav */
     padding: 20px;
+}
+.info{
+    text-shadow: 1px 1px 2px blue;
+}
+#format-table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.img-queso{
+    width:50%;
+    height:50%;
+    object-fit: cover;
 }
