@@ -25,3 +25,15 @@ nav a {
     margin-top: 60px; /* Para evitar que el contenido quede oculto debajo del nav */
     padding: 20px;
 }
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+  }
