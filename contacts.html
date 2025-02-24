@@ -5,16 +5,62 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>contacts</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-contact.css">
+
 </head>
 
 <body>
-  Hello world
-  <!-- Branch Lalo ok -->
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
+    <header>
+        <div class="logo">
+            <h1>Lácteos Deliciosos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h2>Contacto</h2>
+            <p>¿Tienes preguntas o inquietudes? ¡Estamos aquí para ayudarte!</p>
+            <form action="enviar_formulario.php" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+
+        <section class="ubicacion">
+            <h2>Visítanos</h2>
+            <p>Estamos ubicados en:</p>
+            <address>
+                Calle Ficticia 123, Ciudad Leche, País Lácteo<br>
+                Teléfono: (123) 456-7890<br>
+                Email: contacto@lacteosdeliciosos.com
+            </address>
+
+            <div id="mapa">
+                <!-- Aquí puede ir el mapa de Google Maps o el mapa que prefieras -->
+                <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
 </body>
 
 <footer>
