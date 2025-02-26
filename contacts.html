@@ -1,92 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- NavBar -->
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFD1DC;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Quesos Artesanales</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Sobre Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.html">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Contenido principal -->
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Columna izquierda (publicidad) -->
-      <div class="col-md-2 bg-light">
-        <h3>Publicidad</h3>
-        <p>Espacio reservado para anuncios.</p>
-      </div>
-
-      <!-- Columna central (contenido principal) -->
-      <div class="col-md-8">
-        <h1 class="text-center my-4">Contacto</h1>
-        <form id="contactForm">
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" required>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd">
+      <div class="container-fluid">
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <div class="navbar-nav w-100 d-flex justify-content-center">
+            <a
+              class="nav-link btn text-white me-2 rounded-pill px-4"
+              style="background-color: #1678da"
+              href="index.html"
+              >Inicio</a
+            >
+            <a
+              class="nav-link btn text-white me-2 rounded-pill px-4"
+              style="background-color: #179de0"
+              href="about.html"
+              >Acerca de</a
+            >
+            <a
+              class="nav-link btn text-white me-3 rounded-pill px-4"
+              style="background-color: #1478ca"
+              href="contacts.html"
+              >Contacto</a
+            >
           </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-        <!-- Alerta -->
-        <div id="alertMessage" class="alert alert-success mt-3 d-none" role="alert">
-          Mensaje enviado.
         </div>
       </div>
+    </nav>
 
-      <!-- Columna derecha (noticias) -->
-      <div class="col-md-2 bg-light">
-        <h3>Noticias</h3>
-        <p>Espacio reservado para artículos de noticias.</p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 bg-secondary text-white text-center p-3">
+          Columna Izquierda
+        </div>
+        <div class="col-8 bg-light text-center p-3">
+          <h1>Contacto</h1>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Correo</label>
+              <input type="email" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mensaje</label>
+              <textarea class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+          </form>
+        </div>
+        <div class="col-2 bg-secondary text-white text-center p-3">
+          Columna Derecha
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="footer mt-auto py-3" style="background-color: #A2D5F2;">
-    <div class="container text-center">
-      <p class="mb-0">Author: Ninjava Dev Team 2069</p>
-      <p class="mb-0">Contact: devteam@Ninjava.com</p>
-      <p class="mb-0">Project: Tech Insights Blog</p>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  <footer class="container-fluid bg-dark text-white text-center py-3">
+    <p>Author: Ninjava Dev Team 2069</p>
+    <p>Contact: devteam@Ninjava.com</p>
+    <p>Project: Tech Insights Blog</p>
   </footer>
-
-  <!-- Bootstrap JS y dependencias -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      document.getElementById('alertMessage').classList.remove('d-none');
-    });
-  </script>
-</body>
 </html>

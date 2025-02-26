@@ -1,44 +1,143 @@
-/* Paleta de colores pastel */
-:root {
-    --color-primary: #FFD1DC; /* Rosa pastel */
-    --color-secondary: #B2F2BB; /* Verde pastel */
-    --color-accent: #A2D5F2; /* Azul pastel */
-    --color-background: #F8F9FA; /* Gris claro pastel */
-    --color-text: #495057; /* Gris oscuro */
-  }
-  
-  /* Estilos generales */
-  body {
-    background-color: var(--color-background);
-    color: var(--color-text);
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-  }
-  
-  /* NavBar */
-  .navbar {
-    background-color: var(--color-primary) !important;
-  }
-  
-  /* Footer */
-  .footer {
-    background-color: var(--color-accent) !important;
-    color: var(--color-text);
-  }
-  
-  /* Botones */
-  .btn-primary {
-    background-color: var(--color-accent);
-    border-color: var(--color-accent);
-  }
-  
-  .btn-primary:hover {
-    background-color: #8FC1E3; /* Azul pastel más oscuro */
-    border-color: #8FC1E3;
-  }
-  
-  /* Alertas */
-  .alert-success {
-    background-color: var(--color-secondary);
-    border-color: var(--color-secondary);
-    color: var(--color-text);
-  }
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navegación */
+nav {
+    background-color: #252670;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* Contenido */
+.content {
+    text-align: center;
+    padding: 50px;
+}
+
+.content h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+/* Sección de productos */
+.info {
+    background-color: white;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #ff6600;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Tabla de productos */
+#format-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#format-table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.img-queso {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+/* Formulario de contacto */
+.contact-info form {
+    background-color: white;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact-info input, .contact-info textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #cc5500;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.ubicacion {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ubicacion address {
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+#mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#mapa iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
