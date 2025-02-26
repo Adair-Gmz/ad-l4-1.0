@@ -1,70 +1,92 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>contacts</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style-contact.css" />
-  </head>
-
-  <body>
-    <header>
-      <div class="logo">
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFD1DC;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Quesos Artesanales</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Contacto</a>
+          </li>
+        </ul>
       </div>
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="about.html">Acerca de nosotros</a>
-        <a href="contacts.html">Contacto</a>
-      </nav>
-    </header>
+    </div>
+  </nav>
 
-    <main>
-      <section class="contact-info">
-        <h2>Contacto</h2>
-        <p>¿Tienes preguntas o inquietudes? ¡Estamos aquí para ayudarte!</p>
-        <form action="enviar_formulario.php" method="POST">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
+  <!-- Contenido principal -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Columna izquierda (publicidad) -->
+      <div class="col-md-2 bg-light">
+        <h3>Publicidad</h3>
+        <p>Espacio reservado para anuncios.</p>
+      </div>
 
-          <label for="correo">Correo electrónico:</label>
-          <input type="email" id="correo" name="correo" required />
-
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-          <button type="submit">Enviar mensaje</button>
+      <!-- Columna central (contenido principal) -->
+      <div class="col-md-8">
+        <h1 class="text-center my-4">Contacto</h1>
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
-      </section>
-
-      <section class="ubicacion">
-        <h2>Visítanos</h2>
-        <p>Estamos ubicados en:</p>
-        <address>
-          Calle Ficticia 123, Ciudad Leche, País Lácteo<br />
-          Teléfono: (123) 456-7890<br />
-          Email: contacto@lacteosdeliciosos.com
-        </address>
-
-        <div id="mapa">
-          <!-- Aquí puede ir el mapa de Google Maps o el mapa que prefieras -->
-          <iframe
-            src="https://www.google.com/maps/embed?pb=..."
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
+        <!-- Alerta -->
+        <div id="alertMessage" class="alert alert-success mt-3 d-none" role="alert">
+          Mensaje enviado.
         </div>
-      </section>
-    </main>
-  </body>
+      </div>
 
-  <footer>
-    <p>Author: Ninjava Dev Team 2069</p>
-    <p>Contact: devteam@Ninjava.com</p>
-    <p>Project: Tech Insights Blog</p>
-      
+      <!-- Columna derecha (noticias) -->
+      <div class="col-md-2 bg-light">
+        <h3>Noticias</h3>
+        <p>Espacio reservado para artículos de noticias.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3" style="background-color: #A2D5F2;">
+    <div class="container text-center">
+      <p class="mb-0">Author: Ninjava Dev Team 2069</p>
+      <p class="mb-0">Contact: devteam@Ninjava.com</p>
+      <p class="mb-0">Project: Tech Insights Blog</p>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS y dependencias -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('alertMessage').classList.remove('d-none');
+    });
+  </script>
+</body>
 </html>
